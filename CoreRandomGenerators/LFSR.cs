@@ -37,7 +37,7 @@ namespace CoreRandomGenerators
             _endIndexParseValue = countBit + _posRead;
             SetCountBit(countBit);
         }
-        public LFSR() : this(DefaultPolynomial, DefaultStartValue, 8, 0) { }
+        public LFSR() : this((BitArray)DefaultPolynomial.Clone(), (BitArray)DefaultStartValue.Clone(), 8, 0) { }
 
         public override ulong Next()
         {
